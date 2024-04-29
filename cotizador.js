@@ -1,9 +1,9 @@
 const cotizador = document.getElementById("cotizador");
 cotizador.innerHTML = `
-                      <div class="container-2">
+                    <div class="container-2">
                              <h1 class="title-2">Cotizador de Corte de Vinil</h1>
                              <h3>"vinil básico perzonalizado"</h3>
-                             <form id="cotizadorForm">
+                           <form id="cotizadorForm">
                                <div class="form-group">
                                  <label for="ancho">Ancho (cm):</label>
                                  <input type="number" id="ancho" name="ancho" required>
@@ -19,10 +19,10 @@ cotizador.innerHTML = `
                                <div class="form-group">
                                  <button type="button" onclick="calcularPrecio()" class="btn-1">Calcular Precio por m²</button>
                                </div>
-                             </form>
+                       </form>
                              <div id="resultado"></div>
-                    </div>`
-cotizador.appendChild("div");
+                    </div>`;
+cotizador.appendChild(div);
 
 function calcularPrecio() {
   let ancho = parseFloat(document.getElementById("ancho").value);
@@ -35,5 +35,6 @@ function calcularPrecio() {
   let precioTotal = areaM2 * precioPorM2 * cantidad;
 
   document.getElementById("resultado").innerHTML =
-    "Precio por m²: $" + precioTotal.toFixed(2)
-};
+    "Precio por m²: $" + precioTotal.toFixed(2);
+}
+
